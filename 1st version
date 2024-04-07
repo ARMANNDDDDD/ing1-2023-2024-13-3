@@ -13,7 +13,7 @@ typedef struct {
     int width, height;
 } Block;
 
-int check_collision(Block block1, Block block2) {
+int check_collision(Block block1, Block blocke) {
     return (block1.x + block1.width > block2.x &&
             block1.x < block2.x + block2.width &&
             block1.y + block1.height > block2.y &&
@@ -37,7 +37,7 @@ int main() {
     player2_block.x = 100;
     player2_block.y = 100;
 
-    // Installation de la souris
+ // Installation de la souris
     install_mouse();
     set_color_depth(32);
     set_gfx_mode(GFX_AUTODETECT_WINDOWED, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0);
